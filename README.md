@@ -1,61 +1,105 @@
-# Awesome Tech History Milestones (Engineering & Space History)
+# tech-history-today
 
-> A primary-source curated archive of verified technological breakthroughs, early computing, aerospace history, and industrial revolutions. Curated by [Useful Finds Daily](https://www.useful-finds-daily.com).
+> Zero-dependency JavaScript/TypeScript SDK & CLI for today's historical technology milestone, verified primary sources, and engineering history. Powered by [Useful Finds Daily](https://www.useful-finds-daily.com).
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![Useful Finds Daily](https://img.shields.io/badge/History-Useful%20Finds%20Daily-emerald.svg)](https://www.useful-finds-daily.com/on-this-day)
-
----
-
-## Table of Contents
-
-- [Early Computing & Silicon Revolutions](#early-computing--silicon-revolutions)
-- [Space Exploration & Orbital Milestones](#space-exploration--orbital-milestones)
-- [Internet Protocols & Distributed Systems](#internet-protocols--distributed-systems)
-- [Everyday Consumer Technology Inventions](#everyday-consumer-technology-inventions)
-- [Developer Tools & API](#developer-tools--api)
+[![npm version](https://img.shields.io/npm/v/tech-history-today.svg)](https://www.npmjs.com/package/tech-history-today)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Useful Finds Daily](https://img.shields.io/badge/Editorial-Useful%20Finds%20Daily-emerald.svg)](https://www.useful-finds-daily.com)
 
 ---
 
-## Early Computing & Silicon Revolutions
+## ⚡ Instant CLI Usage
 
-- **1947: The First Computer Bug (Grace Hopper)**: An actual moth taped into Harvard Mark II relay 70.
-  - *Full Engineering History:* [The Moth in Relay 70 on Useful Finds Daily](https://www.useful-finds-daily.com/on-this-day/first-computer-bug-september-9-1947)
-- **1956: IBM 305 RAMAC Magnetic Hard Drive**: Fifty 24-inch platters delivering humanity's first 5 megabytes of random-access storage.
-  - *Archive Breakdown:* [Five Megabytes on Fifty Disks on Useful Finds Daily](https://www.useful-finds-daily.com/on-this-day/ibm-305-ramac-hard-drive-september-13-1956)
-- **1958: Jack Kilby’s Integrated Circuit**: The hand-soldered germanium oscillator that broke the "tyranny of numbers".
-  - *Read Article:* [The Monolithic Idea on Useful Finds Daily](https://www.useful-finds-daily.com/on-this-day/jack-kilby-integrated-circuit-september-11-1958)
+Run directly in any terminal with `npx` (no installation required):
 
----
+```bash
+npx tech-history-today
+```
 
-## Space Exploration & Orbital Milestones
+Output:
+```text
+=== TODAY IN TECH HISTORY ===
+Date: OCTOBER 4, 1957
+The Beep That Started Everything: How a 23-Inch Polished Aluminum Sphere Launched the Space Age and Created NASA
 
-- **1957: Sputnik 1 Launch (October 4, 1957)**: How an 83.6-kg polished aluminum sphere ignited the space age, formed NASA, and sparked DARPA.
-  - *Read Article:* [The Beep That Started Everything on Useful Finds Daily](https://www.useful-finds-daily.com/on-this-day/sputnik-1-launch-october-4-1957)
-- **1977: Voyager 1 Interstellar Mission**: The Golden Record and the gravity-assist grand tour of the solar system.
-  - *Read Article:* [The Golden Record Into the Dark on Useful Finds Daily](https://www.useful-finds-daily.com/on-this-day/voyager-1-launch-september-5-1977)
-- **2003: Galileo Final Plunge into Jupiter**: Why NASA deliberately vaporized a spacecraft to shield Europa's subterranean ocean.
-  - *Read Article:* [Galileo Found an Ocean on Useful Finds Daily](https://www.useful-finds-daily.com/on-this-day/galileo-final-plunge-september-21-2003)
+Before October 4, 1957, outer space belonged to science fiction. When an 83.6-kilogram polished aluminum sphere began transmitting its rhythmic 20-megahertz pulse from orbit, it triggered a geopolitical shockwave, created NASA and DARPA, and ignited the modern technological race.
 
----
-
-## Internet Protocols & Distributed Systems
-
-- **1982: The First Emoticon `:-)`**: Scott Fahlman’s post on Carnegie Mellon’s BBS that taught the internet how to smile.
-  - *Read Article:* [The Internet Needed a Raised Eyebrow on Useful Finds Daily](https://www.useful-finds-daily.com/on-this-day/emoticon-born-september-19-1982)
-- **1998: ICANN and Root Domain Allocation**: The DNS architecture behind the modern internet.
-  - *Read Article:* [Who Owns the Internet? on Useful Finds Daily](https://www.useful-finds-daily.com/on-this-day/icann-origin-september-18-1998)
+Read the full verified engineering story:
+https://www.useful-finds-daily.com/on-this-day/sputnik-1-launch-october-4-1957
+```
 
 ---
 
-## Developer Tools & Free API
+## 📦 Installation
 
-- **Public REST API**: `https://www.useful-finds-daily.com/api/v1/today-in-tech`
-- **npm SDK / CLI**: `npx tech-history-today`
-- **Primary Archive**: [Useful Finds Daily On This Day Archive](https://www.useful-finds-daily.com/on-this-day)
+```bash
+npm install tech-history-today
+```
 
 ---
 
-## License
+## 🚀 Programmatic Usage
 
-CC BY-SA 4.0 © [Useful Finds Daily](https://www.useful-finds-daily.com)
+### ESM / TypeScript
+
+```typescript
+import { getTodayInTech } from 'tech-history-today';
+
+async function displayMilestone() {
+  const milestone = await getTodayInTech();
+  console.log(`[${milestone.date}] ${milestone.title}`);
+  console.log(milestone.summary);
+  console.log(`Read more: ${milestone.url}`);
+}
+
+displayMilestone();
+```
+
+---
+
+## 🌐 Public REST API
+
+This package uses the free, public, CORS-enabled REST API hosted by [Useful Finds Daily](https://www.useful-finds-daily.com):
+
+```http
+GET https://www.useful-finds-daily.com/api/v1/today-in-tech
+```
+
+### Response Example
+
+```json
+{
+  "status": "success",
+  "data": {
+    "title": "The Beep That Started Everything: How a 23-Inch Polished Aluminum Sphere Launched the Space Age and Created NASA",
+    "date": "OCTOBER 4, 1957",
+    "summary": "Before October 4, 1957, outer space belonged to science fiction...",
+    "url": "https://www.useful-finds-daily.com/on-this-day/sputnik-1-launch-october-4-1957",
+    "image": "https://www.useful-finds-daily.com/editorial/sputnik-1-launch-october-4-1957-hero.png",
+    "source": "Useful Finds Daily - Today in Tech History Archive",
+    "license": "CC BY-NC 4.0 - Free for non-commercial and educational use with attribution"
+  },
+  "meta": {
+    "totalMilestones": 30,
+    "poweredBy": "https://www.useful-finds-daily.com",
+    "documentation": "https://github.com/erichansa/tech-history-today"
+  }
+}
+```
+
+---
+
+## 📚 Editorial Line & Attribution
+
+Every historical milestone in this dataset is curated and cross-checked against primary archival sources (NASA, IEEE History Center, Computer History Museum, National Security Archive, and academic patents).
+
+Discover more in-depth technology history and curated everyday problem-solving picks at:
+👉 **[Useful Finds Daily (https://www.useful-finds-daily.com)](https://www.useful-finds-daily.com)**
+👉 **[On This Day Technology Archive](https://www.useful-finds-daily.com/on-this-day)**
+👉 **[Launch Radar Hardware Hub](https://www.useful-finds-daily.com/launch-radar)**
+
+---
+
+## 📄 License
+
+MIT © [Useful Finds Daily](https://www.useful-finds-daily.com)

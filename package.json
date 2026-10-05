@@ -1,0 +1,36 @@
+{
+  "name": "tech-history-today",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Zero-dependency SDK and CLI to fetch today's historical technology milestone powered by Useful Finds Daily.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "today-in-tech": "./bin/cli.js"
+  },
+  "keywords": [
+    "tech-history",
+    "on-this-day",
+    "history",
+    "technology",
+    "milestone",
+    "useful-finds-daily",
+    "developer-tools"
+  ],
+  "author": "Useful Finds Daily <editorial@useful-finds-daily.com> (https://www.useful-finds-daily.com)",
+  "homepage": "https://www.useful-finds-daily.com/on-this-day",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erichansa/tech-history-today"
+  },
+  "bugs": {
+    "url": "https://www.useful-finds-daily.com/contact"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "bin/cli.js",
+    "README.md"
+  ]
+}
